@@ -678,6 +678,16 @@ summary::-webkit-details-marker {
   /* 傾ける */
 }
 
+.item-box__banner-text02::before {
+  margin-right: 3px;
+  /* 文字との余白 */
+}
+
+.item-box__banner-text02::after {
+  margin-left: -3px;
+  /* 文字との余白 */
+}
+
 .item-box__img {
   max-width: 472px;
   width: calc(100% - 20px);
@@ -1331,3 +1341,28 @@ summary::-webkit-details-marker {
 }
 
 /* TOPへ戻るボタン関連 終わり */
+
+/* 乃木坂専用css追加 */
+.mg-y-2 {
+  margin: 2% auto;
+}
+
+.mg-y-3 {
+  margin: 3% auto;
+}
+
+.mg-y-10 {
+  margin: 10% auto;
+}
+
+/* .mg-left-1 {
+  margin-left: 1%;
+} */
+
+.wd-100 {
+  width: 100%;
+}
+
+.letter-space-02em {
+  letter-spacing: 0.2em;
+}
