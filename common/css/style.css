@@ -1352,6 +1352,10 @@ summary::-webkit-details-marker {
   padding: 2% 0;
 }
 
+.maxwd-800px {
+  max-width: 800px;
+}
+
 /* ========== アニメーション ========== */
 @keyframes fade-in {
   from {
