@@ -130,6 +130,8 @@ summary::-webkit-details-marker {
   width: 100%;
   padding: 24px 0px;
   margin-bottom: 24px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 @media screen and (max-width: 750px) {
@@ -156,7 +158,7 @@ summary::-webkit-details-marker {
 }
 
 .top__description>p>span {
-  white-space: nowrap;
+  /* white-space: nowrap; */
   display: inline-block;
 }
 
@@ -821,9 +823,9 @@ summary::-webkit-details-marker {
   flex-direction: column;
 }
 
-.prize__item-content {
+/* .prize__item-content {
   margin-left: 1em;
-}
+} */
 
 .prize__item-content>p>span {
   display: inline-block;
@@ -1166,6 +1168,85 @@ summary::-webkit-details-marker {
   border: 0;
 }
 
+
+/* TOPへ戻るボタン関連 */
+#scroll-to-top {
+  position: fixed;
+  z-index: 9999;
+  right: 20px;
+  bottom: 20px;
+  width: 105px;
+  aspect-ratio: 1;
+  opacity: 0;
+  /* 初期は透明 */
+  pointer-events: none;
+  /* 非表示時はクリック無効 */
+  transition: opacity 0.3s ease;
+  /* フェードのアニメーション */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width: 750px) {
+  #scroll-to-top {
+    width: 70px;
+  }
+}
+
+#scroll-to-top.show {
+  opacity: 1;
+  /* 表示時は不透明 */
+  pointer-events: auto;
+  /* クリック有効 */
+}
+
+/* TOPへ戻るボタン関連 終わり */
+
+/* 乃木坂専用css追加 */
+.mg-y-2 {
+  margin: 2% auto;
+}
+
+.mg-y-3 {
+  margin: 3% auto;
+}
+
+.mg-y-10 {
+  margin: 10% auto;
+}
+
+.pd-y-10 {
+  padding: 10% 0;
+}
+
+.pd-y-5 {
+  padding: 5% 0;
+}
+
+.pd-y-2 {
+  padding: 2% 0;
+}
+
+.bg-palepurple {
+  background-color: #F3E6FF;
+}
+
+
+/* .mg-left-1 {
+  margin-left: 1%;
+} */
+
+.wd-100 {
+  width: 100%;
+}
+
+.wd-95 {
+  width: 95%;
+}
+
+.letter-space-02em {
+  letter-spacing: 0.2em;
+}
+
 /* モーダル関連*/
 /* modal-area */
 .modal-area {
@@ -1310,59 +1391,91 @@ summary::-webkit-details-marker {
 }
 
 /* モーダル関連 終わり */
-/* TOPへ戻るボタン関連 */
-#scroll-to-top {
-  position: fixed;
-  z-index: 9999;
-  right: 20px;
-  bottom: 20px;
-  width: 105px;
-  aspect-ratio: 1;
-  opacity: 0;
-  /* 初期は透明 */
-  pointer-events: none;
-  /* 非表示時はクリック無効 */
-  transition: opacity 0.3s ease;
-  /* フェードのアニメーション */
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+/* ===== モーダル2 members用 ===== */
+
+.modal-area__members>p>img {
+  max-width: 400px;
 }
 
-@media screen and (max-width: 750px) {
-  #scroll-to-top {
-    width: 70px;
-  }
+.modal-area__members input:checked~.modal-area__members-o-close {
+  z-index: 9998;
 }
 
-#scroll-to-top.show {
+.modal-area__members input:checked~.modal-area__overlay {
+  z-index: 9997;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
   opacity: 1;
-  /* 表示時は不透明 */
-  pointer-events: auto;
-  /* クリック有効 */
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-animation-name: fade-in;
+  animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
 }
 
-/* TOPへ戻るボタン関連 終わり */
-
-/* 乃木坂専用css追加 */
-.mg-y-2 {
-  margin: 2% auto;
+.modal-area__members input:checked~.modal-area__overlay .modal-area__members-wrap {
+  z-index: 9999;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }
 
-.mg-y-3 {
-  margin: 3% auto;
+.modal-area__members-checkbox {
+  display: none;
 }
 
-.mg-y-10 {
-  margin: 10% auto;
+.modal-area__members-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  font-size: 15px;
+  color: #282c34;
 }
 
-/* .mg-left-1 {
-  margin-left: 1%;
-} */
+.modal-area__members-close:hover {
+  color: #4b5361;
+  cursor: pointer;
+}
 
-.wd-100 {
+.modal-area__members-o-close {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
   width: 100%;
+  height: 100%;
 }
 
-.letter-space-02em {
-  letter-spacing: 0.2em;
+.modal-area__members-contents>img {
+  width: 100%;
+  max-width: 580px;
+}
+
+.modal-area__members-wrap {
+  /* -ms-flex-item-align: center; */
+  /* align-self: flex-start; */
+  width: 90%;
+  max-width: 800px;
+  padding: 30px 0;
+  overflow-y: scroll;
+  background-color: #fff;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  margin: auto;
+  max-height: 800px;
+}
+
+.modal-ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }

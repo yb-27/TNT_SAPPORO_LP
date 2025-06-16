@@ -105,7 +105,7 @@
 
                 <div class="tieup__overview tieup__overview--tieup1">
                   <p>
-                    乃木坂46メンバーと札幌市内の観光地がコラボしたオリジナルポスターを札幌市営地下鉄・札幌市電の駅や車内、観光地に登場します！
+                    乃木坂46メンバーと札幌市内の観光地がコラボしたオリジナルポスターが札幌市営地下鉄・札幌市電の駅や車内、観光地に登場します！
                     <br>
                     また、コンサート会場最寄りの「真駒内駅」構内と「大通駅」連絡通路の大型ビジョン「SNOW VISION」にもオリジナルポスターが登場！<br>駅や「SNOW
                     VISION」、観光地に掲出されるポスターにはメンバーコメント入り！ぜひ足をお運びください。
@@ -116,46 +116,40 @@
                 </div>
 
                 <p>
-                  <label class="prize__modal-label text-color-link" tabindex="0" data-modal-target="members">
+                  <label class="prize__modal-label text-color-link" for="modal-trigger-members" tabindex="0"
+                    id="members-label">
                     観光地とコラボしたメンバーはこちら
                   </label>
                 </p>
-                <div class="modal" id="modal-members" role="dialog" aria-modal="true" hidden>
-                  <div class="modal__overlay" data-close-modal></div>
-                  <div class="modal__content" role="document">
-                    <button class="modal__close" data-close-modal aria-label="閉じる">✖</button>
-                    <h2>コラボメンバー一覧</h2>
-                    <ul>
-                      <li>メンバーA</li>
-                      <li>メンバーB</li>
-                      <li>メンバーC</li>
-                    </ul>
+
+                <!-- モーダル2 -->
+                <div class="modal-area" role="dialog">
+                  <div class="modal-area__members">
+                    <input class="modal-area__members-checkbox" id="modal-trigger-members" type="checkbox">
+                    <div class="modal-area__overlay" id="members-overlay">
+                      <label class="modal-area__members-o-close" for="modal-trigger-members"></label>
+                      <div class="modal-area__members-wrap">
+                        <label class="modal-area__members-close" for="modal-trigger-members" tabindex="0">✖</label>
+                        <div class="modal-area__members-contents">
+                          <ul class="modal-ul">
+                            <li class="wd-95 pd-y-2 bg-palepurple">金川紗耶＆長嶋凛桜×さっぽろテレビ塔</li>
+                            <li class="wd-95 pd-y-2">池田瑛紗×札幌市時計台</li>
+                            <li class="wd-95 pd-y-2 bg-palepurple">梅澤美波×さっぽろ羊ヶ丘展望台</li>
+                            <li class="wd-95 pd-y-2">賀喜遥香×大倉山展望台</li>
+                            <li class="wd-95 pd-y-2 bg-palepurple">井上和×藻岩山山頂展望台</li>
+                            <li class="wd-95 pd-y-2">久保史緒里×札幌市資料館（旧札幌控訴院庁舎）</li>
+                            <li class="wd-95 pd-y-2 bg-palepurple">川崎桜×豊平館</li>
+                            <li class="wd-95 pd-y-2">中西アルノ×札幌市円山動物園</li>
+                            <li class="wd-95 pd-y-2 bg-palepurple">一ノ瀬美空xAOAO SAPPORO</li>
+                            <li class="wd-95 pd-y-2">遠藤さくら×定山渓温泉</li>
+                            <li class="wd-95 pd-y-2 bg-palepurple">※コラボした観光地以外にもコラボポスターは掲出されます</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <div class="item-box">
-                  <p class="item-box__name"><span class="text-color-accent">■</span>スタンプ取得可能期間</p>
-                  <div class="item-box__content">
-                    <p>2025年6月27日（金）～9月29日（月）</p>
-                    <ul class="item-box__notes">
-                      <li><span class="text-color-accent">※</span>駅構内に設置されたスタンプは始発から終電まで、取得が可能です。</li>
-                      <li><span
-                          class="text-color-accent">※</span>札幌市内観光地に設置されたスタンプは、各施設の営業時間のみ取得が可能です。各スポットにお越しの際は事前に営業時間をご確認ください。
-                      </li>
-                      <li><span class="text-color-accent">※</span>札幌市内観光地には一部有料スポットがあります。
-                      </li>
-                      <li><span
-                          class="text-color-accent">※</span>真駒内セキスイハイムアイスアリーナのスタンプ設置スポットは北海道公演開催の7月5日(土)、7月6日(日)のみ設置されます。
-                        開演後はスタンプ設置スポットが撤去される可能性がございますので、早めにご取得いただくことをおすすめいたします。
-                      </li>
-                      <li><span
-                          class="text-color-accent">※</span>札幌市内観光地および真駒内セキスイハイムアイスアリーナのスタンプ設置スポットは天候などの事由により、設置を中止する場合がございます。
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
           </details>
         </section>
 
@@ -177,7 +171,7 @@
 
                 <div class="tieup__overview tieup__overview--tieup1">
                   <p>
-                    札幌市（交通局・国内観光プロモーション）とコラボしたトレインスタンプラリーを開催します！<br><br>
+                    札幌市（交通局・国内観光プロモーション実行委員会）とコラボしたトレインスタンプラリーを開催します！<br><br>
                     札幌市営地下鉄の5駅に設置される5か所のスポット、札幌市内観光地10か所に設置される14か所のスポット、コンサート会場の「真駒内セキスイハイムアイスアリーナ」を合わせた全20か所のスポットで乃木坂46のオリジナルスタンプ画像が取得可能！
                     <br>
                     「<span
@@ -234,7 +228,7 @@
                       <li>・スペシャル特典お申込みに際して、不正な行為があったと当事務局が判断した場合、事前に通知することなくお申込みを無効または取り消しとさせて頂くことがございます。あらかじめご了承ください。
                       </li>
                       <li>・インターネット通信料・接続料はお客様の負担となります。</li>
-                      <li>・特典のポストカードにつきましては、QRスタンプラリーシステムで取得されたプリント番号を使用し、お客様自身で印刷ください。</li>
+                      <li>・特典のポストカードにつきましては、トレインスタンプラリーシステムで取得されたプリント番号を使用し、お客様自身で印刷ください。</li>
                       <li>・ご登録いただいた個人情報は抽選、発送、お問い合わせへの返信等、JR東日本ならびに事務局が実施する施策の運営のみに利用させていただきます。</li>
                       <li>・JR東日本における個人情報の取り扱いについては、HPよりご確認ください。</li>
                       <li>　JR東日本 個人情報保護について：<a class="text-color-link" href="https://www.jreast.co.jp/site/privacy.html"
@@ -463,12 +457,12 @@
                   <button class="stamprally__button"
                     onclick="window.open('https://bm-tnt-stamprally.o2o2o-cp.com/TST_JREAST2025/')"
                     aria-label="スタンプラリー詳細・参加登録（外部サイトが開きます）">
-                    QRスタンプラリー
+                    トレインスタンプラリー
                   </button>
                   <img class="stamprally__img stamprally__img--qr" alt="スタンプラリー詳細・参加登録ページQRコード"
                     src="./common/img/QR_stampsite.svg">
                   <p class="stamprally__text stamprally__text--center">
-                    QRスタンプラリーは、Androidまたは<span>iOSデバイスのみご利用いただけます</span></p>
+                    トレインスタンプラリーは、Androidまたは<span>iOSデバイスのみご利用いただけます</span></p>
                 </div> -->
               </div>
             </div>
@@ -508,30 +502,30 @@
                       <p class="prize__category">【オリジナルデザインポストカード（全４種）】</p>
                       <div class="prize__item">
                         <p class="prize__item-name">スタンプ<span class="text-color-accent mg-left-1">
-                            8</span>個取得特典：ポストカード【A】</p>
+                            8</span>個取得特典：</p>
                         <div class="prize__item-content">
-                          <p>3期生ver.</p>
+                          <p>ポストカード【A】3期生ver.</p>
                         </div>
                       </div>
 
                       <div class="prize__item">
-                        <p class="prize__item-name">スタンプ<span class="text-color-accent">10</span>個取得特典：ポストカード【B】</p>
+                        <p class="prize__item-name">スタンプ<span class="text-color-accent">10</span>個取得特典：</p>
                         <div class="prize__item-content">
-                          <p>4期生ver.</p>
+                          <p>ポストカード【B】4期生ver.</p>
                         </div>
                       </div>
 
                       <div class="prize__item">
-                        <p class="prize__item-name">スタンプ<span class="text-color-accent">12</span>個取得特典：ポストカード【C】</p>
+                        <p class="prize__item-name">スタンプ<span class="text-color-accent">12</span>個取得特典：</p>
                         <div class="prize__item-content">
-                          <p>5期生ver.</p>
+                          <p>ポストカード【C】5期生ver.</p>
                         </div>
                       </div>
 
                       <div class="prize__item">
-                        <p class="prize__item-name">スタンプ<span class="text-color-accent">14</span>個取得特典：ポストカード【D】</p>
+                        <p class="prize__item-name">スタンプ<span class="text-color-accent">14</span>個取得特典：</p>
                         <div class="prize__item-content">
-                          <p>6期生ver.</p>
+                          <p>ポストカード【D】6期生ver.</p>
                         </div>
                       </div>
                     </div>
@@ -609,6 +603,40 @@
                         <div class="prize__stage-spot">
                           <p>＜対象スポット＞</p>
                           <p>
+                            <label class="prize__modal-label text-color-link" for="modal-trigger-howto" tabindex="0"
+                              id="howto-label">
+                              対象スポットの一覧はこちら
+                            </label>
+                          </p>
+                          <div class="modal-area" role="dialog">
+                            <div class="modal-area__howto">
+                              <input class="modal-area__howto-checkbox" id="modal-trigger-howto" type="checkbox">
+                              <div class="modal-area__overlay" id="howto-overlay">
+                                <label class="modal-area__howto-o-close" for="modal-trigger-howto"></label>
+                                <div class="modal-area__howto-wrap">
+                                  <label class="modal-area__howto-close" for="modal-trigger-howto"
+                                    tabindex="0">✖</label>
+                                  <div class="modal-area__howto-contents modal-area__members-wrap">
+                                    <ul>
+                                      <li>真駒内セキスイハイムアイスアリーナ</li>
+                                      <li>麻生駅</li>
+                                      <li>宮の沢駅</li>
+                                      <li>大谷地駅​</li>
+                                      <li>環状通東駅​</li>
+                                      <li>札幌市交通資料館​</li>
+                                      <li>さっぽろテレビ塔​</li>
+                                      <li>札幌市時計台​</li>
+                                      <li>札幌市資料館（旧札幌控訴院庁舎）​</li>
+                                      <li>豊平館​</li>
+                                      <li>AOAO SAPPORO</li>
+                                      <li>札幌市円山動物園​</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <p>
                             <label class="prize__modal-label text-color-link" for="modal-trigger-howto"
                               aria-haspopup="dialog" aria-controls="modal-trigger-howto" tabindex="0" id="howto-label">
                               対象スポットの一覧はこちら
@@ -640,7 +668,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div> -->
 
                         </div>
                       </div>
@@ -682,12 +710,12 @@
                 <button class="stamprally__button"
                   onclick="window.open('https://bm-tnt-stamprally.o2o2o-cp.com/TNT_sapporo2025/')"
                   aria-label="スタンプラリー詳細・参加登録（外部サイトが開きます）">
-                  QRスタンプラリー
+                  トレインスタンプラリー
                 </button>
                 <img class="stamprally__img stamprally__img--qr" alt="スタンプラリー詳細・参加登録ページQRコード"
                   src="./common/img/QR_TNT_sapporo2025.svg">
                 <p class="stamprally__text stamprally__text--center">
-                  QRスタンプラリーは、Androidまたは<span>iOSデバイスのみご利用いただけます</span></p>
+                  トレインスタンプラリーは、Androidまたは<span>iOSデバイスのみご利用いただけます</span></p>
               </div>
             </div>
 
@@ -708,7 +736,7 @@
             <div class="ac-child item-box">
               <div class="item-box__content tieup__overview--tieup1">
                 <ul class="item-box__notes item-box__notes--stamp">
-                  <li>・QRスタンプラリーはお一人様1アカウントでお楽しみください。</li>
+                  <li>・トレインスタンプラリーはお一人様1アカウントでお楽しみください。</li>
                   <li>・スタンプ画像の取得可能期間と実施内容は事前の予告なく変更になる場合がございます。あらかじめご了承ください。</li>
                   <li>・イベント内容は一部無料でご参加いただけます。</li>
                   <li>・スタンプ画像を取得するために、一時的に駅の改札を出入りすることはできません。改札を出る際は必ず精算していただき、再入場される際は改めて乗車券または入場券をご購入いただきますようお願いいたします。
@@ -721,7 +749,7 @@
                   <li>・個人間取引などに関するトラブルの責任は一切負いかねます。</li>
                   <li>・スペシャル特典お申込みに際して、不正な行為があったと当事務局が判断した場合、事前に通知することなくお申込みを無効または取り消しとさせて頂くことがございます。あらかじめご了承ください。</li>
                   <li>・インターネット通信料・接続料はお客様の負担となります。</li>
-                  <li>・特典のポストカードにつきましては、QRスタンプラリーシステムで取得されたプリント予約番号を使用し、お客様自身で印刷ください。</li>
+                  <li>・特典のポストカードにつきましては、トレインスタンプラリーシステムで取得されたプリント予約番号を使用し、お客様自身で印刷ください。</li>
                   <li>・ご登録いただいた個人情報は抽選、発送、お問い合わせへの返信等、札幌市ならびに事務局が実施する施策の運営のみに利用させていただきます。</li>
                   <li>・札幌市における個人情報の取り扱いについては、HPよりご確認ください。<br>札幌市 個人情報保護について：https://www.jreast.co.jp/site/privacy.html
                   </li>
