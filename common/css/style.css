@@ -1247,83 +1247,29 @@ summary::-webkit-details-marker {
   letter-spacing: 0.2em;
 }
 
-/* モーダル関連*/
-/* modal-area */
-.modal-area {
+.modal {
   text-align: center;
+  width: 100%;
 }
 
-.modal-area__overlay {
-  position: absolute;
+.modal-checkbox {
+  display: none;
+}
+
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   z-index: -100;
-  display: none;
-  width: 50%;
   width: 100%;
   height: 100%;
+  display: none;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-transform: scale(1);
-  transform: scale(1);
 }
 
-.modal-area__howto>p>img {
-  max-width: 400px;
-}
-
-.modal-area__howto input:checked~.modal-area__howto-o-close {
-  z-index: 9998;
-}
-
-.modal-area__howto input:checked~.modal-area__overlay {
-  z-index: 9997;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: auto;
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-animation-name: fade-in;
-  animation-name: fade-in;
-  animation-name: fade-in;
-  animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
-  animation-duration: 0.5s;
-  animation-duration: 0.5s;
-}
-
-.modal-area__howto input:checked~.modal-area__overlay .modal-area__howto-wrap {
-  z-index: 9999;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-
-.modal-area__howto-checkbox {
-  display: none;
-}
-
-.modal-area__howto-close {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  width: 10px;
-  height: 10px;
-  font-size: 15px;
-  color: #282c34;
-}
-
-.modal-area__howto-close:hover {
-  color: #4b5361;
-  cursor: pointer;
-}
-
-.modal-area__howto-o-close {
+.modal-overlay-close {
   position: fixed;
   top: 0;
   left: 0;
@@ -1332,145 +1278,62 @@ summary::-webkit-details-marker {
   height: 100%;
 }
 
-.modal-area__howto-contents>img {
-  width: 100%;
-  max-width: 780px;
-  max-width: 580px;
-}
-
-.modal-area__howto-menu {
-  position: relative;
-  display: block;
-  padding: 10px 0;
-  margin: 0 auto;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  margin-bottom: 15px;
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--title-text-color);
-  text-align: center;
-  background-color: var(--title-bg-color);
-}
-
-.modal-area__howto-menu::before {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  padding-right: 0;
-  padding-left: 0;
-  margin: 0 auto;
-  margin-right: 0;
-  margin-left: 0;
-  text-align: center;
-  content: "";
-  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(25%, #9c7600), color-stop(75%, #9c7600), to(transparent));
-  background-image: linear-gradient(to right, transparent, #9c7600 25%, #9c7600 75%, transparent);
-  background-image: -webkit-gradient(linear, left top, right top, from(var(--title-underBar-color)), to(var(--title-underBar-color)));
-  background-image: linear-gradient(to right, var(--title-underBar-color), var(--title-underBar-color));
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.modal-area__howto-wrap {
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  width: 90%;
-  max-width: 500px;
-  padding: 40px 18px 30px;
-  margin: 20px auto;
-  overflow: hidden;
-  background-color: #fff;
-  border-radius: 2px;
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-/* モーダル関連 終わり */
-
-/* ===== モーダル2 members用 ===== */
-
-.modal-area__members>p>img {
-  max-width: 400px;
-}
-
-.modal-area__members input:checked~.modal-area__members-o-close {
-  z-index: 9998;
-}
-
-.modal-area__members input:checked~.modal-area__overlay {
+.modal-checkbox:checked~.modal-overlay {
   z-index: 9997;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   overflow: auto;
   opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-animation-name: fade-in;
-  animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
+  animation: fade-in 0.5s;
 }
 
-.modal-area__members input:checked~.modal-area__overlay .modal-area__members-wrap {
+.modal-checkbox:checked~.modal-overlay .modal-wrap {
   z-index: 9999;
-  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 
-.modal-area__members-checkbox {
-  display: none;
-}
-
-.modal-area__members-close {
+.modal-close {
   position: absolute;
   top: 10px;
   right: 20px;
-  width: 10px;
-  height: 10px;
   font-size: 15px;
   color: #282c34;
-}
-
-.modal-area__members-close:hover {
-  color: #4b5361;
   cursor: pointer;
 }
 
-.modal-area__members-o-close {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -100;
-  width: 100%;
-  height: 100%;
+.modal-close:hover {
+  color: #4b5361;
 }
 
-.modal-area__members-contents>img {
-  width: 100%;
-  max-width: 580px;
-}
-
-.modal-area__members-wrap {
-  /* -ms-flex-item-align: center; */
-  /* align-self: flex-start; */
+/* ========== モーダル本体ラッパー ========== */
+.modal-wrap {
   width: 90%;
-  max-width: 800px;
-  padding: 30px 0;
-  overflow-y: scroll;
+  padding: 30px 18px;
+  margin: auto;
   background-color: #fff;
   border-radius: 0.5em;
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  margin: auto;
-  max-height: 800px;
+}
+
+/* ========== モーダルごとの個別指定 ========== */
+.modal-wrap.modal-howto {
+  max-width: 800px;
+  padding: 30px 0;
+  max-height: 900px;
+  overflow-y: scroll;
+}
+
+.modal-wrap.modal-members {
+  max-width: 800px;
+  padding: 30px 0;
+  max-height: 900px;
+  overflow-y: scroll;
+}
+
+/* ========== モーダル内容エリア ========== */
+.modal-contents>img {
+  width: 100%;
+  max-width: 580px;
 }
 
 .modal-ul {
@@ -1478,4 +1341,64 @@ summary::-webkit-details-marker {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+/* ========== 補助クラス ========== */
+.bg-palepurple {
+  background-color: #F3E6FF;
+}
+
+.pd-y-2 {
+  padding: 2% 0;
+}
+
+/* ========== アニメーション ========== */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ========== ラベルスタイル例 ========== */
+.modal-label {
+  display: inline-block;
+  color: #008803;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 10px 0;
+  text-align: left;
+  width: 100%;
+}
+
+.modal-label:hover {
+  color: #008803;
+}
+
+.tx-c {
+  text-align: center;
+}
+
+.tx-l {
+  text-align: left;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.border-gray {
+  background-color: #3e3e3e;
+  height: 2px;
+}
+
+@media screen and (min-width: 550px) {
+  .sp-br {
+    display: none;
+  }
 }
