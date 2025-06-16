@@ -75,7 +75,7 @@
           </h2>
           <div class="top__description">
             <p>乃木坂46の夏の風物詩「真夏の全国ツアー」</p>
-            <p>「真夏の全国ツアー2025北海道公演」の開催に合わせて乃木坂46が<span>札幌市（交通局・国内観光プロモーション実行委員会）とコラボレーション！</span></p>
+            <p>「真夏の全国ツアー2025北海道公演」の<br class="sp-br">開催に合わせて乃木坂46が<span>札幌市（交通局・国内観光プロモーション実行委員会）と<br class="sp-br">コラボレーション！</span></p>
             <p>乃木坂46と札幌で<span>夏の思い出を作りましょう★</span></p>
           </div>
 
@@ -115,15 +115,46 @@
                   <img src="./common/img/topTitle.png" alt="">
                 </div>
 
-                <p>
+                <!-- <p>
                   <label class="prize__modal-label text-color-link" for="modal-trigger-members" tabindex="0"
                     id="members-label">
                     観光地とコラボしたメンバーはこちら
                   </label>
-                </p>
+                  <label class="modal-label text-color-link" for="modal-trigger-members">メンバー一覧を表示</label>
+                </p> -->
+
+                <div class="modal">
+                  <label class="modal-label tx-c" for="modal-trigger-members">観光地とコラボしたメンバーはこちら</label>
+                  <div class="modal-members">
+                    <input class="modal-checkbox" id="modal-trigger-members" type="checkbox">
+                    <div class="modal-overlay">
+                      <label class="modal-overlay-close" for="modal-trigger-members"></label>
+                      <div class="modal-wrap modal-members">
+                        <label class="modal-close" for="modal-trigger-members">✖</label>
+                        <div class="modal-contents">
+                          <p class="mg-y-3 bold">観光地とコラボしたメンバー</p>
+                          <ul class="modal-ul">
+                            <li class="wd-95 pd-y-2 bg-palepurple">金川紗耶＆長嶋凛桜×さっぽろテレビ塔</li>
+                            <li class="wd-95 pd-y-2">池田瑛紗×札幌市時計台</li>
+                            <li class="wd-95 pd-y-2 bg-palepurple">梅澤美波×さっぽろ羊ヶ丘展望台</li>
+                            <li class="wd-95 pd-y-2">賀喜遥香×大倉山展望台</li>
+                            <li class="wd-95 pd-y-2 bg-palepurple">井上和×藻岩山山頂展望台</li>
+                            <li class="wd-95 pd-y-2">久保史緒里×札幌市資料館（旧札幌控訴院庁舎）</li>
+                            <li class="wd-95 pd-y-2 bg-palepurple">川崎桜×豊平館</li>
+                            <li class="wd-95 pd-y-2">中西アルノ×札幌市円山動物園</li>
+                            <li class="wd-95 pd-y-2 bg-palepurple">一ノ瀬美空xAOAO SAPPORO</li>
+                            <li class="wd-95 pd-y-2">遠藤さくら×定山渓温泉</li>
+                          </ul>
+                          <div class="wd-95 border-gray mg-y-3"></div>
+                          <p class="tx-l wd-95 mg-y-3">※コラボした観光地以外にもコラボポスターは掲出されます</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 <!-- モーダル2 -->
-                <div class="modal-area" role="dialog">
+                <!-- <div class="modal-area" role="dialog">
                   <div class="modal-area__members">
                     <input class="modal-area__members-checkbox" id="modal-trigger-members" type="checkbox">
                     <div class="modal-area__overlay" id="members-overlay">
@@ -148,7 +179,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
           </details>
         </section>
@@ -603,12 +634,43 @@
                         <div class="prize__stage-spot">
                           <p>＜対象スポット＞</p>
                           <p>
-                            <label class="prize__modal-label text-color-link" for="modal-trigger-howto" tabindex="0"
+                            <!-- <label class="prize__modal-label text-color-link" for="modal-trigger-howto" tabindex="0"
                               id="howto-label">
                               対象スポットの一覧はこちら
-                            </label>
+                            </label> -->
+                            <!-- <label class="modal-label" for="modal-trigger-howto text-color-link">対象スポットの一覧はこちら</label> -->
                           </p>
-                          <div class="modal-area" role="dialog">
+                          <div class="modal">
+                            <label class="modal-label" for="modal-trigger-howto">対象スポットの一覧はこちら</label>
+                            <div class="modal-howto">
+                              <input class="modal-checkbox" id="modal-trigger-howto" type="checkbox">
+                              <div class="modal-overlay">
+                                <label class="modal-overlay-close" for="modal-trigger-howto"></label>
+                                <div class="modal-wrap modal-howto">
+                                  <label class="modal-close" for="modal-trigger-howto">✖</label>
+                                  <div class="modal-contents">
+                                    <p class="mg-y-3 bold">対象スポット一覧</p>
+                                    <ul class="modal-ul">
+                                      <li class="wd-95 bg-palepurple pd-y-2">真駒内セキスイハイムアイスアリーナ</li>
+                                      <li class="wd-95 pd-y-2">麻生駅</li>
+                                      <li class="wd-95 bg-palepurple pd-y-2">宮の沢駅</li>
+                                      <li class="wd-95 pd-y-2">大谷地駅​</li>
+                                      <li class="wd-95 bg-palepurple pd-y-2">環状通東駅​</li>
+                                      <li class="wd-95 pd-y-2">札幌市交通資料館​</li>
+                                      <li class="wd-95 bg-palepurple pd-y-2">さっぽろテレビ塔​</li>
+                                      <li class="wd-95 pd-y-2">札幌市時計台​</li>
+                                      <li class="wd-95 bg-palepurple pd-y-2">札幌市資料館（旧札幌控訴院庁舎）​</li>
+                                      <li class="wd-95 pd-y-2">豊平館​</li>
+                                      <li class="wd-95 bg-palepurple pd-y-2">AOAO SAPPORO</li>
+                                      <li class="wd-95 pd-y-2">札幌市円山動物園​</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- <div class="modal-area" role="dialog">
                             <div class="modal-area__howto">
                               <input class="modal-area__howto-checkbox" id="modal-trigger-howto" type="checkbox">
                               <div class="modal-area__overlay" id="howto-overlay">
@@ -620,39 +682,6 @@
                                     <ul>
                                       <li>真駒内セキスイハイムアイスアリーナ</li>
                                       <li>麻生駅</li>
-                                      <li>宮の沢駅</li>
-                                      <li>大谷地駅​</li>
-                                      <li>環状通東駅​</li>
-                                      <li>札幌市交通資料館​</li>
-                                      <li>さっぽろテレビ塔​</li>
-                                      <li>札幌市時計台​</li>
-                                      <li>札幌市資料館（旧札幌控訴院庁舎）​</li>
-                                      <li>豊平館​</li>
-                                      <li>AOAO SAPPORO</li>
-                                      <li>札幌市円山動物園​</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <p>
-                            <label class="prize__modal-label text-color-link" for="modal-trigger-howto"
-                              aria-haspopup="dialog" aria-controls="modal-trigger-howto" tabindex="0" id="howto-label">
-                              対象スポットの一覧はこちら
-                            </label>
-                          </p>
-                          <div class="modal-area" role="dialog">
-                            <div class="modal-area__howto">
-                              <input class="modal-area__howto-checkbox" id="modal-trigger-howto" type="checkbox">
-                              <div class="modal-area__overlay">
-                                <label class="modal-area__howto-o-close" for="modal-trigger-howto"></label>
-                                <div class="modal-area__howto-wrap"><label class="modal-area__howto-close"
-                                    for="modal-trigger-howto" tabindex="0">✖</label>
-                                  <div class="modal-area__howto-contents">
-                                    <ul>
-                                      <li>真駒内セキスイハイムアイスアリーナ​</li>
-                                      <li>麻生駅​</li>
                                       <li>宮の沢駅</li>
                                       <li>大谷地駅​</li>
                                       <li>環状通東駅​</li>
@@ -751,7 +780,7 @@
                   <li>・インターネット通信料・接続料はお客様の負担となります。</li>
                   <li>・特典のポストカードにつきましては、トレインスタンプラリーシステムで取得されたプリント予約番号を使用し、お客様自身で印刷ください。</li>
                   <li>・ご登録いただいた個人情報は抽選、発送、お問い合わせへの返信等、札幌市ならびに事務局が実施する施策の運営のみに利用させていただきます。</li>
-                  <li>・札幌市における個人情報の取り扱いについては、HPよりご確認ください。<br>札幌市 個人情報保護について：https://www.jreast.co.jp/site/privacy.html
+                  <li>・札幌市における個人情報の取り扱いについては、HPよりご確認ください。<br>札幌市 個人情報保護について：https://www.city.sapporo.jp/somu/kokai/hogo.html
                   </li>
                   <li>
                     ・当該施策の運営委託に必要な範囲で委託先に提供する場合や当該施策関係会社に提供する場合を除き、個人情報を応募者の承諾なく第三者に提供することはございません（法令等により開示を求められた場合を除く）。
