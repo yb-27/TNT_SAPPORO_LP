@@ -1154,15 +1154,6 @@ summary::-webkit-details-marker {
   transform: translateY(-50%) rotate(270deg);
 }
 
-.ac-child,
-.ac-child__description {
-  overflow: hidden;
-  height: 0;
-  transition: height 0.5s ease;
-  display: none;
-}
-
-
 /* アコーディオン関連 終わり*/
 /* スクリーンリーダー用のスタイル */
 .sr-only {
@@ -1323,17 +1314,29 @@ summary::-webkit-details-marker {
 .modal-wrap.modal-howto {
   max-width: 800px;
   padding: 30px 0;
-  height: 85vh;
-  max-height: 900px;
+  /* height: 85vh; */
+  /* max-height: 900px; */
   overflow-y: scroll;
+}
+
+@media screen and (min-width: 700px) {
+  .modal-wrap.modal-howto {
+    height: 85vh;
+  }
 }
 
 .modal-wrap.modal-members {
   max-width: 800px;
   padding: 30px 0;
-  height: 85vh;
-  max-height: 900px;
+  /* height: 85vh; */
+  /* max-height: 900px; */
   overflow-y: scroll;
+}
+
+@media screen and (min-width: 700px) {
+  .modal-wrap.modal-wrap.modal-members {
+    height: 85vh;
+  }
 }
 
 /* ========== モーダル内容エリア ========== */

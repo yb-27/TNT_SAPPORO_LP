@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // スライドトグル関数（簡易アニメーション付き）
   function toggleSlide(element) {
-    const openDuration = parseInt(element.dataset.durationOpen || '1000', 10);
-    const closeDuration = parseInt(element.dataset.durationClose || '100', 10);
+    const openDuration = parseInt(element.dataset.durationOpen || '500', 10);
+    const closeDuration = parseInt(element.dataset.durationClose || '500', 10);
 
     if (element.style.display === 'none' || getComputedStyle(element).display === 'none') {
       element.style.display = 'block';
